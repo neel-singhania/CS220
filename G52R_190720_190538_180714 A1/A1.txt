@@ -1,0 +1,1 @@
+In Q3 we have assumed that the 2-4 decoder has an enable pin.
