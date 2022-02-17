@@ -10,7 +10,7 @@ module det_1010(clk,in,out);
     reg[2:0] cur_state, next_state;
 
 
-    always @(posedge clk) begin
+    always @(negedge clk) begin
         cur_state <= next_state;
     end
     initial begin

@@ -31,30 +31,18 @@ module tb;
         #3
         in <= 0;
         #10
-        //$display(out);
         in <= 1;
         #10
-        //$display(out);
         in <= 1;
         #10
-        //$display(out);
         in <= 0;
         #10
-        //$display(out);
         in <= 1;
         #10
-        //$display(out);
         in <= 0;
         #10
-        //$display(out);
         in <= 1;
         #10
-        //$display(out);
         in <= 0;
-        #10
-        //$display(out);
-        in <= 0;
-        // #10
-        //$display(out);
     end
 endmodule
