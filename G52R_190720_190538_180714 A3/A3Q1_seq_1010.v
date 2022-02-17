@@ -10,7 +10,7 @@ module det_1010(clk,in,out);
     reg[2:0] cur_state, next_state;
 
 
-    always @(negedge clk) begin
+    always @(posedge clk) begin
         cur_state <= next_state;
     end
     initial begin
@@ -46,7 +46,7 @@ module det_1010(clk,in,out);
         endcase
 
     end
-        assign out = cur_state == S1010? 1:0;
+        assign out = next_state == S1010? 1:0;
 
 
 endmodule

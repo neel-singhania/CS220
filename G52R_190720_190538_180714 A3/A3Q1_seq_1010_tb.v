@@ -1,3 +1,4 @@
+`include "A3Q1_seq_1010.v"
 module tb;
     reg clk, in;
     wire out;
@@ -6,7 +7,7 @@ module tb;
 
     always @ ( negedge clk ) begin
         if ($time > 0) begin
-            $display(out);
+            $display("Time = %d, in = %d, out = %d",$time,in,out);
         end
     end
 
@@ -20,9 +21,9 @@ module tb;
     initial begin
         forever begin
          clk = 0;
-         #5        
+         #3        
          clk = 1;
-         #5        
+         #3      
          clk = 0;
         end
     end
@@ -30,19 +31,35 @@ module tb;
     initial begin
         #3
         in <= 0;
-        #10
+        #6
         in <= 1;
-        #10
+        #6
         in <= 1;
-        #10
+        #6
         in <= 0;
-        #10
+        #6
         in <= 1;
-        #10
+        #6
         in <= 0;
-        #10
+        #6
         in <= 1;
-        #10
+        #6
+        in <= 0;
+        #6
+        in <= 0;
+        #6
+        in <= 1;
+        #6
+        in <= 0;
+        #6
+        in <= 1;
+        #6
+        in <= 1;
+        #6
+        in <= 0;
+        #6
+        in <= 1;
+        #6
         in <= 0;
     end
 endmodule
