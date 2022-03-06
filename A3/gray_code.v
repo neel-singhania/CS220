@@ -25,43 +25,38 @@ begin
 end
 always @(posedge clk ) 
 begin
-    // if (reset) begin
-    //     out<=3'b000;
-    // end
-    // else 
-    // begin
         case (state)
             s0 : begin
                  out<=3'b000;
-                 cout<=1'b0;    
+                 cout<=0;    
             end 
             s1 : begin
                  out<=3'b001;
-                 cout<=1'b0;    
+                 cout<=0;    
             end
             s2 : begin
                  out<=3'b011;
-                 cout<=1'b0;    
+                 cout<=0;    
             end
             s3 : begin
                  out<=3'b010;
-                 cout<=1'b0;    
+                 cout<=0;    
             end
             s4 : begin
                  out<=3'b110;
-                 cout<=1'b0;    
+                 cout<=0;    
             end
             s5 : begin
                  out<=3'b111;
-                 cout<=1'b0;    
+                 cout<=0;    
             end
             s6 : begin
                  out<=3'b101;
-                 cout<=1'b0;    
+                 cout<=0;    
             end
             s7 : begin
                  out<=3'b100;
-                 cout<=1'b1;    
+                 cout<=1;    
             end 
             default: out<=3'bxxx; 
         endcase
